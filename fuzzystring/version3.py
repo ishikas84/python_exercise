@@ -47,6 +47,6 @@ class FuzzyString:
 
     def __add__(self, other):
         if isinstance(other, FuzzyString):
-            return FuzzyString(self.sentence.lower() + other.sentence.lower())
+            return FuzzyString(self.sentence + other.sentence)
         else:
-            return FuzzyString(self.sentence.lower() + other.lower())
+            return FuzzyString(self.sentence + other)

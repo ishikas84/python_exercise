@@ -52,7 +52,7 @@ class FuzzyString:
 
     def __add__(self, other):
         if isinstance(other, FuzzyString):
-            return FuzzyString(self.sentence.lower() + other.sentence.lower())
+            return FuzzyString(self.sentence + other.sentence)
         else:
-            return FuzzyString(self.unicode_norm(self.sentence.lower()) + self.unicode_norm(other.lower()))
+            return FuzzyString(self.unicode_norm(self.sentence) + self.unicode_norm(other))
         
